@@ -1,0 +1,162 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+body{
+    background: #ccc;
+    color: #fefefe;
+}
+
+.main-background{
+    bottom:0;
+    direction:ltr;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top:0;
+    z-index:-20;
+
+}
+
+.main-title{
+    font-size: 65px;
+}
+
+.center-items{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.VYMape{
+    background-image: url("https://tatica.fedorapeople.org/Themes/F12/wallpaper-mosaico3.svg");
+    bottom: 0;
+    direction: ltr;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -10;
+}
+
+.big-rounded-btn{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    transition: border-radius 0.3s linear;
+    -o-transition: border-radius 0.3s linear;
+    -ms-transition: border-radius 0.3s linear;
+    -moz-transition:  border-radius 0.3s linear;
+    -webkit-transition:  border-radius 0.3s linear;
+    background-color: none;
+    border-color: #eee;
+    cursor: pointer;
+}
+
+
+.big-rounded-btn:hover{
+    border-radius: 20%;
+    width: 200px;
+    height: 200px;
+    transition: border-radius 0.5s linear;
+    -o-transition: border-radius 0.5s linear;
+    -ms-transition: border-radius 0.5s linear;
+    -moz-transition:  border-radius 0.5s linear;
+    -webkit-transition:  border-radius 0.5s linear;
+    background-color: rgba(193,193,193,0.5);
+    border-color: #eee;
+    cursor: pointer;
+    color:#FFF;
+    font-weight: bold;
+}
+
+.big-rounded-btn.btn-primary{
+    background-color: transparent;
+}
+
+.big-rounded-btn.btn-primary:focus,.big-rounded-btn.btn-primary:hover,.big-rounded-btn.btn-primary:active:focus{
+    background-color: rgba(193,193,193,0.5);
+}
+
+.big-rounded-btn.btn-blurred{
+    font-weight: bold;
+    font-size:20px;
+    width:400px;
+}
+
+.big-rounded-btn.btn-blurred:hover,.big-rounded-btn.btn-blurred:focus,.big-rounded-btn.btn-blurred:active:focus{
+
+}
+
+.big-rounded-btn.btn:focus,.big-rounded-btn.btn:active,.big-rounded-btn:active:focus{
+    outline:none;
+}
+
+.full-height{
+    min-height: 100%;
+}
+
+.white-transparent-btn{
+    border-color:#ccc;
+    cursor:pointer;
+    background-color: rgba(193,193,193.0.5);
+    color:#FFF;
+    box-shadow:0px 0px 2px 2px #FFF;
+
+}
+
+.white-transparent-btn:hover{
+    border-color:#FFF;
+    cursor:pointer;
+    background-color: rgba(193,193,193.0.5);
+    color:#FFF;
+    box-shadow:0px 0px 2px 2px #FFF;
+
+}
+
+.rotate-image2 {
+    width: auto;
+    height: 400px;
+    position: relative;
+    -webkit-animation-name: wave; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: 1; /* Chrome, Safari, Opera */
+    -webkit-animation-direction: normal; /* Chrome, Safari, Opera */
+    animation-name: wave;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+ @keyframes wave {
+    100% {
+    -ms-transform: rotate(75deg); /* IE 9 */
+    -webkit-transform: rotate(75deg); /* Chrome, Safari, Opera */
+    transform: rotate(75deg);
+    }
+}
+
+
+
+
+.world
+{
+    width: auto;
+    height: 400px;
+    position: relative;
+-webkit-animation : spin1 2s infinite linear;
+-moz-animation: spin1 2s infinite linear;
+-o-animation: spin1 2s infinite linear;
+-ms-animation: spin1 2s infinite linear;
+animation: spin1 2s infinite linear;
+    display: block;
+}
+ 
+@keyframes spin1 {
+0% { -webkit-transform: rotate(0deg);}
+100% { -webkit-transform: rotate(360deg);}
+}
+
+

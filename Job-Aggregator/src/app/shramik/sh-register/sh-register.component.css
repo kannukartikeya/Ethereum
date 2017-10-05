@@ -1,0 +1,16 @@
+.shramik-container .sharmik-profile{
+    margin-top: 85px;
+}
+
+.sharmik-profile{
+    position: absolute;
+    background: rgba(239,189,192,0.5);
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.shramik-container form label{
+    color: #333;
+}
