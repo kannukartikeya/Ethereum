@@ -1,21 +1,24 @@
-kartikeya@kartikeya-Vostro-15-3568:~/Ethereum/Ethereum/solidity-experiments/migrations$ truffle console
+kartikeya@kartikeya-Vostro-15-3568:~/Ethereum/Ethereum/solidity-experiments$ truffle console
 truffle(development)> var mv = MyVoting.at(MyVoting.address)
 undefined
-truffle(development)> mv.getVotes.call('Kartik')
+truffle(development)> mv.totalVotesFor.call('Kartik')
 { [String: '0'] s: 1, e: 0, c: [ 0 ] }
-truffle(development)> mv.voteCandidate('Kartik',{from:web3.eth.accounts[0]})
-{ tx: '0xd5dedf917dfa371eaa1a46d683000957e238c14f3e099a718d38c2ac5499a351',
+truffle(development)> mv.voteForCandidate('Rama', {from: web3.eth.accounts[0]})
+{ tx: '0xa3fd1b5d73753a342d9b1c8857812079cdd1c77c07f85eada8a4cadcb6f43ed4',
   receipt: 
-   { transactionHash: '0xd5dedf917dfa371eaa1a46d683000957e238c14f3e099a718d38c2ac5499a351',
+   { transactionHash: '0xa3fd1b5d73753a342d9b1c8857812079cdd1c77c07f85eada8a4cadcb6f43ed4',
      transactionIndex: 0,
-     blockHash: '0x5c645ed6a802d74cd0fd2d413ac03736d4f381d3fb04e1aace351b1ffb182759',
-     blockNumber: 23,
-     gasUsed: 43471,
-     cumulativeGasUsed: 43471,
+     blockHash: '0x73be062412bb77db50c0a477ee64aba6a183b140de29432f1f5b4d39840d05b5',
+     blockNumber: 13,
+     gasUsed: 44184,
+     cumulativeGasUsed: 44184,
      contractAddress: null,
      logs: [],
      status: 1 },
   logs: [] }
-truffle(development)> mv.getVotes.call('Kartik')
+truffle(development)> mv.totalVotesFor.call('Rama')
 { [String: '1'] s: 1, e: 0, c: [ 1 ] }
-truffle(development)> 
+truffle(development)> mv.totalVotesFor.call('Rama')
+{ [String: '1'] s: 1, e: 0, c: [ 1 ] }
+truffle(development)> mv.totalVotesFor.call('Kartik')
+{ [String: '0'] s: 1, e: 0, c: [ 0 ] }
