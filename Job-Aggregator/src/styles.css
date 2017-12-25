@@ -160,3 +160,18 @@ animation: spin1 2s infinite linear;
 }
 
 
+.circle {
+    height: 400px;
+    width: auto;
+    border-radius: 50%;
+    border: 5px solid black;
+    margin: auto;
+    -webkit-animation: rotateY 1s infinite linear;
+    animation: rotateY 1s infinite linear;
+  }
+  @-webkit-keyframes rotateY {
+    to { -webkit-transform: rotateY(360deg); }
+  }
+  @keyframes rotateY {
+    to { transform: rotateY(360deg); }
+  }
