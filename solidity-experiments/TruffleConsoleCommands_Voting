@@ -21,4 +21,53 @@ truffle(development)> mv.totalVotesFor.call('Rama')
 truffle(development)> mv.totalVotesFor.call('Rama')
 { [String: '1'] s: 1, e: 0, c: [ 1 ] }
 truffle(development)> mv.totalVotesFor.call('Kartik')
-{ [String: '0'] s: 1, e: 0, c: [ 0 ] }
+{ [String: '0'] s: 1, e: 0, c: [ 0 ] 
+
+
+--------------------------------------Ethereum Contract------------------------------------------------------
+truffle(development)> var emv = EthVoting.at(EthVoting.address)
+undefined
+truffle(development)> emv.buy({value:web3.toWei('1','ether'),from:web3.eth.accounts[1]})
+{ tx: '0xdd8609519c5408f6cc0ceb7ff46beb2eee02f59476f2228222c78132a46e77be',
+  receipt: 
+   { transactionHash: '0xdd8609519c5408f6cc0ceb7ff46beb2eee02f59476f2228222c78132a46e77be',
+     transactionIndex: 0,
+     blockHash: '0x62d01074295a89f29b76a6ed86d5010dff7ceae32e39130785643bca71aa92ea',
+     blockNumber: 9,
+     gasUsed: 68042,
+     cumulativeGasUsed: 68042,
+     contractAddress: null,
+     logs: [],
+     status: 1 },
+  logs: [] }
+truffle(development)> emv.voterDetails(web3.eth.accounts[1])
+[ { [String: '10'] s: 1, e: 1, c: [ 10 ] }, [] ]
+truffle(development)> emv.buy({value:web3.toWei('2','ether'),from:web3.eth.accounts[1]})
+{ tx: '0xaf5e6115794060f74899ea5bbeacf440ed88336e23bca9615e3629f464d6bb55',
+  receipt: 
+   { transactionHash: '0xaf5e6115794060f74899ea5bbeacf440ed88336e23bca9615e3629f464d6bb55',
+     transactionIndex: 0,
+     blockHash: '0x74138ac44c820e7b89b474dcf27af3abc3c300f76f8aa4e2f42ab90c7b012be1',
+     blockNumber: 10,
+     gasUsed: 38042,
+     cumulativeGasUsed: 38042,
+     contractAddress: null,
+     logs: [],
+     status: 1 },
+  logs: [] }
+truffle(development)> emv.voterDetails(web3.eth.accounts[1])
+[ { [String: '30'] s: 1, e: 1, c: [ 30 ] }, [] ]
+truffle(development)> web3.eth.accounts[1].balance
+undefined
+truffle(development)> web3.eth.getBalance(web3.eth.accounts[1])
+{ [String: '96989391600000000000'] s: 1, e: 19, c: [ 969893, 91600000000000 ] }
+truffle(development)> web3.eth.getBalance(web3.eth.accounts[2])
+{ [String: '100000000000000000000'] s: 1, e: 20, c: [ 1000000 ] }
+truffle(development)> web3.eth.getBalance(web3.eth.accounts[0])
+{ [String: '99809063900000000000'] s: 1, e: 19, c: [ 998090, 63900000000000 ] }
+truffle(development)> web3.eth.getBalance(web3.eth.accounts[3])
+{ [String: '100000000000000000000'] s: 1, e: 20, c: [ 1000000 ] }
+truffle(development)> web3.eth.getBalance(web3.eth.accounts[4])
+{ [String: '100000000000000000000'] s: 1, e: 20, c: [ 1000000 ] }
+
+

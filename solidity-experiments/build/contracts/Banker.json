@@ -1,0 +1,495 @@
+{
+  "contractName": "Banker",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "abc_1",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_silverCoinAddress",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b6040516020806101ca83398101604052808051906020019091905050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505061014f8061007b6000396000f300606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680634c54cd8714610046575b600080fd5b341561005157600080fd5b61005961006f565b6040518082815260200191505060405180910390f35b6000806000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690508073ffffffffffffffffffffffffffffffffffffffff1663922779336000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561010257600080fd5b6102c65a03f1151561011357600080fd5b50505060405180519050915050905600a165627a7a723058209903e21caf12d26375084be1f716fc2f5ae7d9b1a20c190452ed9f56be8c680f0029",
+  "deployedBytecode": "0x606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680634c54cd8714610046575b600080fd5b341561005157600080fd5b61005961006f565b6040518082815260200191505060405180910390f35b6000806000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690508073ffffffffffffffffffffffffffffffffffffffff1663922779336000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561010257600080fd5b6102c65a03f1151561011357600080fd5b50505060405180519050915050905600a165627a7a723058209903e21caf12d26375084be1f716fc2f5ae7d9b1a20c190452ed9f56be8c680f0029",
+  "sourceMap": "54:336:0:-;;;113:99;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;187:18;167:17;;:38;;;;;;;;;;;;;;;;;;113:99;54:336;;;;;;",
+  "deployedSourceMap": "54:336:0:-;;;;;;;;;;;;;;;;;;;;;;;;218:170;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;253:4;274:29;317:17;;;;;;;;;;;274:61;;357:18;:22;;;:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;350:31;;218:170;;:::o",
+  "source": "pragma solidity ^0.4.11;\n\nimport \"./SilverCoin.sol\";\n\ncontract Banker {\n\n    address silverCoinAddress;\n    \n    function Banker(address _silverCoinAddress) {\n        silverCoinAddress = _silverCoinAddress;\n    }\n\n    function abc_1() constant returns (uint) {\n    \n        SilverCoin instanceSilverCoin = SilverCoin(silverCoinAddress);\n    \n        return instanceSilverCoin.abc();\n    }\n}\n",
+  "sourcePath": "/home/kartikeya/Ethereum/Ethereum/solidity-experiments/contracts/Banker.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/home/kartikeya/Ethereum/Ethereum/solidity-experiments/contracts/Banker.sol",
+      "exportedSymbols": {
+        "Banker": [
+          31
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".11"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 378,
+          "absolutePath": "/home/kartikeya/Ethereum/Ethereum/solidity-experiments/contracts/SilverCoin.sol",
+          "file": "./SilverCoin.sol",
+          "scope": 32,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 2,
+        "name": "ImportDirective",
+        "src": "26:26:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            31
+          ],
+          "name": "Banker",
+          "scope": 32
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "silverCoinAddress",
+              "scope": 31,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "type": "address"
+                },
+                "id": 3,
+                "name": "ElementaryTypeName",
+                "src": "77:7:0"
+              }
+            ],
+            "id": 4,
+            "name": "VariableDeclaration",
+            "src": "77:25:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "Banker",
+              "payable": false,
+              "scope": 31,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_silverCoinAddress",
+                      "scope": 14,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 5,
+                        "name": "ElementaryTypeName",
+                        "src": "129:7:0"
+                      }
+                    ],
+                    "id": 6,
+                    "name": "VariableDeclaration",
+                    "src": "129:26:0"
+                  }
+                ],
+                "id": 7,
+                "name": "ParameterList",
+                "src": "128:28:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 8,
+                "name": "ParameterList",
+                "src": "157:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4,
+                              "type": "address",
+                              "value": "silverCoinAddress"
+                            },
+                            "id": 9,
+                            "name": "Identifier",
+                            "src": "167:17:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 6,
+                              "type": "address",
+                              "value": "_silverCoinAddress"
+                            },
+                            "id": 10,
+                            "name": "Identifier",
+                            "src": "187:18:0"
+                          }
+                        ],
+                        "id": 11,
+                        "name": "Assignment",
+                        "src": "167:38:0"
+                      }
+                    ],
+                    "id": 12,
+                    "name": "ExpressionStatement",
+                    "src": "167:38:0"
+                  }
+                ],
+                "id": 13,
+                "name": "Block",
+                "src": "157:55:0"
+              }
+            ],
+            "id": 14,
+            "name": "FunctionDefinition",
+            "src": "113:99:0"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "abc_1",
+              "payable": false,
+              "scope": 31,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 15,
+                "name": "ParameterList",
+                "src": "232:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 30,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 16,
+                        "name": "ElementaryTypeName",
+                        "src": "253:4:0"
+                      }
+                    ],
+                    "id": 17,
+                    "name": "VariableDeclaration",
+                    "src": "253:4:0"
+                  }
+                ],
+                "id": 18,
+                "name": "ParameterList",
+                "src": "252:6:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        20
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "instanceSilverCoin",
+                          "scope": 30,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "contract SilverCoin",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "SilverCoin",
+                              "referencedDeclaration": 377,
+                              "type": "contract SilverCoin"
+                            },
+                            "id": 19,
+                            "name": "UserDefinedTypeName",
+                            "src": "274:10:0"
+                          }
+                        ],
+                        "id": 20,
+                        "name": "VariableDeclaration",
+                        "src": "274:29:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "contract SilverCoin",
+                          "type_conversion": true
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 377,
+                              "type": "type(contract SilverCoin)",
+                              "value": "SilverCoin"
+                            },
+                            "id": 21,
+                            "name": "Identifier",
+                            "src": "306:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4,
+                              "type": "address",
+                              "value": "silverCoinAddress"
+                            },
+                            "id": 22,
+                            "name": "Identifier",
+                            "src": "317:17:0"
+                          }
+                        ],
+                        "id": 23,
+                        "name": "FunctionCall",
+                        "src": "306:29:0"
+                      }
+                    ],
+                    "id": 24,
+                    "name": "VariableDeclarationStatement",
+                    "src": "274:61:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 18
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "abc",
+                              "referencedDeclaration": 376,
+                              "type": "function () view external returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 20,
+                                  "type": "contract SilverCoin",
+                                  "value": "instanceSilverCoin"
+                                },
+                                "id": 25,
+                                "name": "Identifier",
+                                "src": "357:18:0"
+                              }
+                            ],
+                            "id": 26,
+                            "name": "MemberAccess",
+                            "src": "357:22:0"
+                          }
+                        ],
+                        "id": 27,
+                        "name": "FunctionCall",
+                        "src": "357:24:0"
+                      }
+                    ],
+                    "id": 28,
+                    "name": "Return",
+                    "src": "350:31:0"
+                  }
+                ],
+                "id": 29,
+                "name": "Block",
+                "src": "259:129:0"
+              }
+            ],
+            "id": 30,
+            "name": "FunctionDefinition",
+            "src": "218:170:0"
+          }
+        ],
+        "id": 31,
+        "name": "ContractDefinition",
+        "src": "54:336:0"
+      }
+    ],
+    "id": 32,
+    "name": "SourceUnit",
+    "src": "0:391:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {
+    "4447": {
+      "events": {},
+      "links": {},
+      "address": "0xbd2c938b9f6bfc1a66368d08cb44dc3eb2ae27be"
+    }
+  },
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2017-12-27T13:45:08.797Z"
+}
