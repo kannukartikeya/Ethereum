@@ -1,3 +1,9 @@
+
+blockchain integration : infura - kannu.kartikeya@gmail.com/xdr56yhn
+Created new DAPP project in Infura and used its API key for integration
+
+
+
 kartikeya@kartikeya-Vostro-15-3568:~/Ethereum/Ethereum/solidity-experiments/angular4-truffle/angular4-truffle-starter-dapp$ truffle migrate --network rinkeby
 You can improve web3's peformance when running Node.js versions older than 10.5.0 by installing the (deprecated) scrypt package in your project
 ⚠️  Important ⚠️
@@ -65,7 +71,7 @@ Summary
 ⚠️  Important ⚠️
 If you're using an HDWalletProvider, it must be Web3 1.0 enabled or your migration will hang.
 
-
+0x7fb2D8e393A000C51eFA52a9c735F01a4db31dee
 Starting migrations...
 ======================
 > Network name:    'rinkeby'
