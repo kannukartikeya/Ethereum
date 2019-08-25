@@ -42,6 +42,9 @@ export class AppComponent {
       );
       // Use Mist/MetaMask's provider
       this.web3 = new Web3(window.web3.currentProvider);
+      if ('enable' in this.web3.currentProvider) {
+        this.web3.currentProvider.enable();
+      }
     } else {
       console.warn(
         'No web3 detected. Falling back to http://localhost:8545. You should remove this fallback when you deploy live, as it\'s inherently insecure. Consider switching to Metamask for development. More info here: http://truffleframework.com/tutorials/truffle-and-metamask'
@@ -63,7 +66,7 @@ export class AppComponent {
         alert('There was an error fetching your accounts.');
         return;
       }
-
+      console.log(accs);
       if (accs.length === 0) {
         alert(
           'Couldn\'t get any accounts! Make sure your Ethereum client is configured correctly.'
@@ -72,6 +75,7 @@ export class AppComponent {
       }
       this.accounts = accs;
       this.account = this.accounts[0];
+      console.log(this.account);
 
       // This is run from window:load and ZoneJS is not aware of it we
       // need to use _ngZone.run() so that the UI updates on promise resolution
